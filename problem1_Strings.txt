@@ -1,0 +1,50 @@
+
+# Remove duplicates from a string, do it in-place
+"""
+Given a string, the task is to remove all  duplicate characters from the string and print the resultant string.  The order of remaining characters in the output should be same as in the original string.
+
+Input:
+The first line of input contains an integer T denoting the number of test cases. The description of T test cases follows.
+Each test case contains a string of length N.
+
+Output:
+Print the resultant substring after removing duplicate characters from string.
+
+Constraints:
+1 ≤ T ≤ 100
+1 ≤ N ≤ 100
+
+Example:
+Input:
+2
+geeksforgeeks
+HappyNewYear
+
+Output:
+geksfor
+HapyNewYr
+
+"""  
+  #code
+
+T=int(input())
+in_strings=[]
+def remdup(s):
+    result=''
+    for i in s:
+        if i not in result:
+            result= result + i
+        else:
+            continue
+    return result
+    
+for i in range(0,T):
+    in_strings.append(input())
+	
+output=[]
+for s in in_strings:
+    output.append(remdup(s))
+	
+for o in output:
+    print(o)
+    
